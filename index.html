@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <main>   
+        <div class = "start-screen" id="start-section">
+            <h3>Start the Ultimate Quiz and <br/>test your skills !</h3>
+            <select name="level" id="level" required>
+                <option value="" disabled selected>Select the Level</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>                                                                                         
+                <option value="Hard">Hard</option>
+            </select>
+            <button id="play"><img src="./assets/play.svg" alt=""></button>  
+        </div> 
+                <div class="quiz-screen hide" >
+                    <div class="header-container">
+                        <div id="quiz-head">
+                            <h1>Quiz App</h1>
+                            <span id="timer">Time Left <span id="time-left">0</span></span>
+                        </div>
+                        <div id="progress-bar"></div>
+                    </div>
+
+                    <div class ="quiz-question">
+                        <h3 class="ques"></h3>
+                        <div class ="quiz-options">
+                            <!-- <button class="option">
+                                <div class = "ques-content">Lorem ipsum dolor sit amet consectetur. </div>
+                            </button>
+                            <button class="option correct">
+                                <div class = "ques-content">Hyper Text Markup Language</div>
+                            </button>
+                            <button class="option incorrect">
+                                <div class = "ques-content">Lorem ipsum dolor sit amet consectetur.</div>
+                            </button>
+                            <button class="option">
+                                <div class = "ques-content">Lorem ipsum dolor sit.</div>
+                            </button> -->
+                        </div> 
+                    </div>
+        
+                    <div class="hr" ></div>
+                    <div id="ques-details">
+                        <p><span id="curr-no">1 </span>&nbsp;of <span id="total-no"> 10 </span>Questions</p>
+                        <button id="next-btn">Next Ques</button>
+                    </div>
+                </div>
+
+                
+    </main>
+
+    <script type = "module" src = "questions.js"></script>
+    <script  type = "module" src = "script.js" ></script>
+
+</body>
+</html>
+        
+       

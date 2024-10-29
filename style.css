@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #0a7ffc;
+}
+
+main{
+    width: 100%;
+    max-width: 760px;
+    /* position: relative; */
+    background-color: white;
+    height: max-content;
+    border-radius: 5px;
+    box-shadow: 6px 8px 10px rgb(22, 22, 22);
+}
+
+h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;;
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+h3{
+    font-size: 26px;
+    text-align: center;
+
+}
+
+#start-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #113457;
+    color: white;
+    padding: 40px;
+    gap: 20px;
+    border-radius: 10px;
+    border: 2px solid #0a7ffc;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#start-section h3 {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #e3f2fd;
+    margin-bottom: 20px;
+}
+
+#start-section select {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 1px solid #cce4fe;
+    background-color: #f1f8ff;
+    color: #113457;
+    transition: all 0.2s ease;
+}
+
+#start-section select:hover {
+    background-color: #e3f2fd;
+    transform: scale(1.03);
+}
+
+#play {
+    padding: 12px;
+    border-radius: 50%;
+    background-color: #93dcf7;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    border: 4px outset rgb(194, 234, 255);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#play:hover {
+    background-color: #2d89eb;
+    transform: scale(1.05);
+    border: 4px outset rgb(181, 232, 163);
+}
+
+#start-section img {
+    height: 100px;
+}
+
+.quiz-sceen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#quiz-head{
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#timer{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    gap: 10px;
+    background-color:#cce4fe ;
+    border: 1px solid blue;
+    border-radius: 8px;
+    font-size: 18px;
+    color: blue;
+}
+
+#time-left{
+    background-color:#363245;
+    padding: 6px 8px;
+    border-radius: 8px;
+    color: white;
+}
+
+#progress-bar{
+    position: relative;
+    height: 3px;
+    background-color: #0a7ffc;
+    width: 20%;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.quiz-question{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ques{
+    font-size: 28px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.quiz-options{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.option{
+    border: 2px solid #c3dff6;
+    padding: 8px 16px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+    text-align: left;
+}
+
+.option:hover{
+    transform: translateY(2px);
+    background-color: #a8c9ec;
+    border: 2px solid rgb(107, 174, 213);
+}
+
+.option img{
+    height: 22px;
+}
+
+.option.correct{
+    background-color: #d4edda;
+    border-color: #d4edda;
+    color: rgb(7, 99, 7);
+    border: 2px solid green;
+}
+
+.option.incorrect{
+    background-color: #f7d7da;
+    border-color: #f7d7da;
+    color: #840a0a;
+    border: 2px solid rgb(150, 52, 52);
+}
+
+
+.hide{
+    display: none !important;
+}
+
+.hr{
+    border: 1px solid #8a8b8d;
+}
+
+#ques-details{
+    padding: 10px 15px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    color: rgb(61, 61, 61);
+}
+
+#next-btn{
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: 2px solid blue;
+    background-color: #2d89eb;
+    color: white;
+    font-size: 18px;
+}
+
+.score{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    padding: 40px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 900;
+}
+
+
+
+
+
