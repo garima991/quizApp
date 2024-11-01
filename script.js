@@ -96,8 +96,8 @@ function startTimer() {
     questionInterval = setInterval(() => {
         currTime--;
         timerValue.querySelector("#time-left").textContent = currTime;
-        progressBarWidth += (10000/currTime);
-        progressBar.style.width = `${progressBarWidth}%`
+        // progressBarWidth += (10000/currTime);
+        // progressBar.style.width = `${progressBarWidth}%`
         if (currTime <= 0) {
             clearInterval(questionInterval); // Stop the timer
             loadNextQues();
