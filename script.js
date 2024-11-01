@@ -27,7 +27,7 @@ function setDifficulty(difficulty){
         perQuesTime = 16000; // 15 sec
         showAnswer = 2000;  // 2 sec
     }
-    if(difficulty === "Hard"){
+    if(difficulty === "hard"){
         perQuesTime = 11000; // 10 sec
         showAnswer = 1000; // 1
     }
@@ -50,7 +50,7 @@ function startQuiz(event){
 
 
 function fetchQues(){
-    fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=multiple")
+    fetch("https://opentdb.com/api.php?amount=10&category=18&difficulty=medium&type=multiple")
     .then((res) => res.json())
     .then((data) => {
         Questions = data.results;
@@ -92,15 +92,15 @@ function loadQues(){
 
 function startTimer() {
     currTime = perQuesTime / 1000;
-    let progressBarWidth = 0;
     questionInterval = setInterval(() => {
         currTime--;
         timerValue.querySelector("#time-left").textContent = currTime;
-        // progressBarWidth += (10000/currTime);
-        // progressBar.style.width = `${progressBarWidth}%`
+
         if (currTime <= 0) {
             clearInterval(questionInterval); // Stop the timer
-            loadNextQues();
+            showCorrectAnswer();
+            setTimeout(loadNextQues, showAnswer);
+            // loadNextQues();
         }
     }, 1000);
 }
