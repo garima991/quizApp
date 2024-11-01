@@ -92,8 +92,10 @@ function loadQues(){
 
 function startTimer() {
     currTime = perQuesTime / 1000;
+    let progressWidth = 100/currTime;
     questionInterval = setInterval(() => {
         currTime--;
+        progressBar.style.width = `${progressWidth * currTime}%`
         timerValue.querySelector("#time-left").textContent = currTime;
 
         if (currTime <= 0) {
@@ -143,8 +145,8 @@ function checkAns(event) {
 
 function loadNextQues(){
     if (currQues < Questions.length - 1) {
-        loadQues();
         currQues++;
+        loadQues();
     } else {
         quizScreen.innerHTML = "";
         showScores();
