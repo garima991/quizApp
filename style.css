@@ -215,6 +215,10 @@ h3{
     font-size: 18px;
 }
 
+#next-btn:hover{
+    scale: 1.05;
+}
+
 .score{
     display: flex;
     align-items: center;
