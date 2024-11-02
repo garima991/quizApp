@@ -17,7 +17,6 @@ let score = 0;
 let showAnswer = 1000;
 let questionInterval;
 
-
 function setDifficulty(difficulty){
     if(difficulty === "easy"){
         perQuesTime = 31000; // 30sec
@@ -48,7 +47,6 @@ function startQuiz(event){
     fetchQues();
 }
 
-
 function fetchQues(){
     fetch("https://opentdb.com/api.php?amount=10&category=18&difficulty=medium&type=multiple")
     .then((res) => res.json())
@@ -58,14 +56,12 @@ function fetchQues(){
     });
 }
 
-
 function loadQues(){
     document.getElementById("curr-no").innerText = currQues;
     clearInterval(questionInterval);
     progressBar.style.width = "100%";
     startTimer();
     
-
     let newQuestion = Questions[currQues].question;
     questionText.innerText = newQuestion;
 
@@ -87,7 +83,6 @@ function loadQues(){
         button.dataset.isCorrect = (option === rightAns);
         button.addEventListener("click", checkAns);
     });
-
 }
 
 function startTimer() {
@@ -129,6 +124,7 @@ function checkAns(event) {
         score++;
         console.log("Correct Answer!");
     } 
+
     else if (clickedBtn) {
         clickedBtn.classList.add("incorrect");
         const icon = document.createElement('img');
@@ -147,7 +143,8 @@ function loadNextQues(){
     if (currQues < Questions.length - 1) {
         currQues++;
         loadQues();
-    } else {
+    }
+    else {
         quizScreen.innerHTML = "";
         showScores();
     }
@@ -160,7 +157,6 @@ function showScores(){
     scoreCard.innerHTML = `<h2>Your total score <br/> ${score}/10 </h2>`;
     quizScreen.appendChild(scoreCard);
 }
-
 
 startBtn.addEventListener("click", startQuiz);
 nextBtn.addEventListener("click", loadNextQues);
