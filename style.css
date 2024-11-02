@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Unlock&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -23,7 +25,7 @@ main{
 }
 
 h1{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;;
+    font-family: "Unlock", serif;
     font-size: 36px;
     font-weight: 900;
     letter-spacing: 2px;
@@ -53,7 +55,7 @@ h3{
 #start-section h3 {
     font-size: 30px;
     font-weight: 700;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "Unlock", serif;
     color: #e3f2fd;
     margin-bottom: 20px;
 }
@@ -106,6 +108,8 @@ h3{
 }
 
 #timer{
+    font-family: "EB Garamond",serif;
+    /* font-weight: 600; */
     height: 100%;
     display: flex;
     align-items: center;
@@ -114,7 +118,7 @@ h3{
     background-color:#cce4fe ;
     border: 1px solid blue;
     border-radius: 8px;
-    font-size: 18px;
+    font-size: 20px;
     color: blue;
 }
 
@@ -197,6 +201,7 @@ h3{
 }
 
 #ques-details{
+    font-family: "EB Garamond",serif;
     padding: 10px 15px;
     font-size: 18px;
     display: flex;
@@ -204,6 +209,7 @@ h3{
     align-items: center;
     font-size: 18px;
     color: rgb(61, 61, 61);
+    
 }
 
 #next-btn{
@@ -212,7 +218,9 @@ h3{
     border: 2px solid blue;
     background-color: #2d89eb;
     color: white;
-    font-size: 18px;
+    font-size: 20px;
+    /* font-weight: 900; */
+    font-family: "EB Garamond",serif;
 }
 
 #next-btn:hover{
