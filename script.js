@@ -114,6 +114,9 @@ function showCorrectAnswer() {
 }
 
 function checkAns(event) {
+    document.querySelectorAll(".option").forEach((option) => {
+        option.removeEventListener("click",checkAns);
+    });
     const clickedBtn = event.currentTarget;
 
     if (clickedBtn && clickedBtn.dataset.isCorrect === "true") {
